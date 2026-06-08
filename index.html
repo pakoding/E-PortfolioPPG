@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio PPG Salman Hidayat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="page-loader">
+    <div class="loader-content">
+      <div class="loader-spinner"></div>
+      <p>Memuat...</p>
+    </div>
+  </div>
+
+  <div id="custom-cursor"></div>
+  <div id="scroll-progress"></div>
+
+  <nav id="floating-nav">
+    <div class="nav-container">
+      <div class="nav-brand">PPG Salman</div>
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">Beranda</a></li>
+        <li><a href="#profil" class="nav-link">Profil</a></li>
+        <li><a href="#artefak" class="nav-link">Artefak</a></li>
+        <li><a href="#penilaian" class="nav-link">Penilaian</a></li>
+        <li><a href="#model-guru" class="nav-link">Model Guru</a></li>
+        <li><a href="#refleksi" class="nav-link">Refleksi</a></li>
+        <li><a href="#filosofi" class="nav-link">Filosofi</a></li>
+        <li><a href="#galeri" class="nav-link">Galeri</a></li>
+      </ul>
+      <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="hero" class="section hero section-bg-hero">
+      <div class="hero-bg">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="gradient-blur"></div>
+      </div>
+      <div class="hero-content">
+        <span class="welcome-text">Selamat Datang di</span>
+        <h1 class="hero-title">PORTFOLIO</h1>
+        <div class="hero-image-wrapper">
+          <div class="hero-image-placeholder">
+            <img src="assets/images/profil.jpg" alt="Salman Hidayat">
+          </div>
+        </div>
+        <div class="name-badge">
+          <span>Salman Hidayat</span>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+      </div>
+    </section>
+
+    <section id="profil" class="section profil section-bg-profil">
+      <div class="container">
+        <h2 class="section-title">Profil</h2>
+        <p class="section-subtitle">Mengenal lebih dekat mahasiswa PPG</p>
+        <div class="bento-grid">
+          <div class="bento-card card-biodata glass">
+            <div class="bento-card-header">
+              <div class="profile-photo glass">
+                <img src="assets/images/profil.jpg" alt="Salman Hidayat">
+              </div>
+              <h3>Biodata Mahasiswa</h3>
+            </div>
+            <div class="biodata-list">
+              <div class="biodata-item"><span class="label">Nama</span><span class="value">Salman Hidayat, S.Kom.</span></div>
+              <div class="biodata-item"><span class="label">NIM</span><span class="value">2590544951278</span></div>
+              <div class="biodata-item"><span class="label">Bidang Studi</span><span class="value">Teknik Jaringan Komputer dan Telekomunikasi</span></div>
+              <div class="biodata-item"><span class="label">Universitas</span><span class="value">Universitas Negeri Makassar</span></div>
+              <div class="biodata-item"><span class="label">Angkatan</span><span class="value">Gelombang 1 Tahun 2026</span></div>
+              <div class="biodata-item"><span class="label">Email</span><span class="value">salmanhidayat15@gmail.com</span></div>
+              <div class="biodata-item"><span class="label">Sekolah Mitra</span><span class="value">SMKN 10 Makassar</span></div>
+              <div class="biodata-item"><span class="label">Dosen Pembimbing</span><span class="value">Dr. Fatahullah, S.Pd., M.Eng.</span></div>
+              <div class="biodata-item"><span class="label">Guru Pamong</span><span class="value">Muh Takbir, S.Pd., MM.</span></div>
+            </div>
+            <div class="biodata-photo-bottom">
+              <img src="assets/images/profil.jpg" alt="Salman Hidayat">
+            </div>
+          </div>
+          <div class="bento-card card-daerah glass">
+            <h3>Asal Daerah</h3>
+            <div class="daerah-content">
+              <div class="daerah-image-full">
+                <img src="assets/images/daerah.webp" alt="Desa Ara, Bulukumba">
+              </div>
+              <p class="daerah-name">Kab. Bulukumba — Desa Ara</p>
+              <p class="daerah-desc">Saya berasal dari Kab. Bulukumba, tepatnya di Desa Ara. Sebagai seorang calon guru, saya belajar banyak tentang kecerdasan manusia justru dari para orang tua di sana.</p>
+            </div>
+            <div class="daerah-tags">
+              <span class="tag">Budaya Lokal</span>
+              <span class="tag">Potensi Daerah</span>
+            </div>
+            <button class="btn-selengkapnya" data-modal="asal-daerah">Selengkapnya</button>
+          </div>
+          <div class="bento-card card-inspirasi glass">
+            <h3>Inspirasi Menjadi Guru</h3>
+            <div class="inspirasi-content">
+              <div class="inspirasi-image">
+                <img src="assets/images/inspirasi.jpg" alt="Inspirasi">
+              </div>
+              <blockquote class="inspirasi-quote">"Saya ingin menjadi guru yang mampu meyakinkan setiap anak didik saya bahwa sekeras apa pun latar belakang mereka, mereka tetap bisa menjadi mahakarya"</blockquote>
+              <p class="inspirasi-desc">Terinspirasi dari para Punggawa di Desa Ara yang membangun perahu Pinisi tanpa gambar teknis — mengajar bukan memindahkan isi buku, tapi menanamkan insting dan karakter agar murid bisa membangun "perahu" kehidupan mereka sendiri.</p>
+            </div>
+            <button class="btn-selengkapnya" data-modal="inspirasi">Selengkapnya</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="artefak" class="section artefak section-bg-artefak">
+      <div class="container">
+        <h2 class="section-title">Artefak Pembelajaran</h2>
+        <p class="section-subtitle">Perjalanan pembelajaran PPL secara sistematis</p>
+        <div class="tab-navigation">
+          <button class="tab-btn active" data-siklus="1">Siklus 1</button>
+          <button class="tab-btn" data-siklus="2">Siklus 2</button>
+          <button class="tab-btn" data-siklus="3">Siklus 3</button>
+        </div>
+        <div id="siklus-container"></div>
+      </div>
+    </section>
+
+    <section id="penilaian" class="section penilaian section-bg-penilaian">
+      <div class="container">
+        <h2 class="section-title">Penilaian</h2>
+        <p class="section-subtitle">Hasil evaluasi pembelajaran secara transparan</p>
+        <div class="penilaian-grid">
+          <div class="lampiran-card glass">
+            <h3>Lampiran 7 — Penyusunan Perangkat Pembelajaran</h3>
+            <div class="nilai-list">
+              <div class="nilai-item">
+                <div class="nilai-header"><span>Identitas dan Kompetensi</span><span class="badge-nilai">-</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+              </div>
+              <div class="nilai-item">
+                <div class="nilai-header"><span>Pengembangan Materi Bahan Sumber dan Media Belajar</span><span class="badge-nilai">-</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+              </div>
+              <div class="nilai-item">
+                <div class="nilai-header"><span>Skenario Kegiatan Pembelajaran</span><span class="badge-nilai">-</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+              </div>
+              <div class="nilai-item">
+                <div class="nilai-header"><span>Penilaian</span><span class="badge-nilai">-</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+              </div>
+            </div>
+            <div class="rata-rata"><span>Rata-rata: </span><span class="rata-value">-</span></div>
+            <button class="btn-doc" onclick="window.open('https://drive.google.com/drive/folders/1lVwNvztpYcPX9q1sQ3BP0jtvxS_9gDCH?usp=drive_link', '_blank')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> Lihat Dokumen</button>
+          </div>
+          <div class="lampiran-card glass">
+            <h3>Lampiran 8 — Instrumen Penilaian Praktik Mengajar</h3>
+            <div class="nilai-list">
+              <div class="nilai-item">
+                <div class="nilai-header"><span>Membuka Pembelajaran</span><span class="badge-nilai">-</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+              </div>
+              <div class="nilai-item">
+                <div class="nilai-header"><span>Melaksanakan Kegiatan Inti Pembelajaran</span><span class="badge-nilai">-</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+              </div>
+              <div class="nilai-item">
+                <div class="nilai-header"><span>Menutup Pembelajaran</span><span class="badge-nilai">-</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+              </div>
+              <div class="nilai-item">
+                <div class="nilai-header"><span>Faktor Penunjang</span><span class="badge-nilai">-</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+              </div>
+            </div>
+            <div class="rata-rata"><span>Rata-rata: </span><span class="rata-value">-</span></div>
+            <button class="btn-doc" onclick="window.open('https://drive.google.com/drive/folders/1zeBezOs0WQEF3eoELAKLoj9EpSqPcvLd?usp=drive_link', '_blank')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> Lihat Dokumen</button>
+          </div>
+        </div>
+        <div class="keterangan-nilai glass">
+          <h3>Keterangan Nilai</h3>
+          <div class="nilai-tabel">
+            <div class="nilai-row header"><span>Nilai</span><span>Kategori</span></div>
+            <div class="nilai-row"><span>1</span><span>Tidak Baik</span></div>
+            <div class="nilai-row"><span>2</span><span>Cukup Baik</span></div>
+            <div class="nilai-row"><span>3</span><span>Baik</span></div>
+            <div class="nilai-row"><span>4</span><span>Sangat Baik</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="model-guru" class="section model-guru section-bg-model">
+      <div class="container">
+        <h2 class="section-title">Model Guru</h2>
+        <p class="section-subtitle">Profil guru ideal yang ingin dicapai</p>
+        <div class="model-grid">
+          <div class="model-card glass">
+            <div class="model-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>Misi</h3>
+            <ol class="model-list">
+              <li>Menyelenggarakan pembelajaran yang inklusif</li>
+              <li>Menciptakan pengalaman belajar bermakna</li>
+              <li>Berpusat pada peserta didik</li>
+              <li>Menggali potensi maksimal siswa</li>
+            </ol>
+          </div>
+          <div class="model-card glass">
+            <div class="model-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3>Kompetensi</h3>
+            <div class="kompetensi-list">
+              <div class="kompetensi-item"><span>Pedagogik Adaptif</span><div class="progress-bar"><div class="progress-fill" style="width:75%"></div></div></div>
+              <div class="kompetensi-item"><span>Profesionalisme Keilmuan</span><div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div></div>
+              <div class="kompetensi-item"><span>Sosial</span><div class="progress-bar"><div class="progress-fill" style="width:85%"></div></div></div>
+              <div class="kompetensi-item"><span>Kepribadian</span><div class="progress-bar"><div class="progress-fill" style="width:90%"></div></div></div>
+            </div>
+          </div>
+          <div class="model-card glass">
+            <div class="model-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3>Karakter Guru</h3>
+            <div class="tag-container">
+              <span class="tag">Empati & Sabar</span>
+              <span class="tag">Inovatif</span>
+              <span class="tag">Integritas</span>
+              <span class="tag">Teladan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="refleksi" class="section refleksi section-bg-refleksi">
+      <div class="container">
+        <h2 class="section-title">Refleksi</h2>
+        <p class="section-subtitle">Proses reflektif selama PPL</p>
+        <div class="timeline">
+          <div class="timeline-item glass">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Materi yang Telah Dipelajari</h3>
+              <ul class="refleksi-list">
+                <li>Dasar-dasar pedagogik: teori belajar, karakteristik peserta didik, strategi pembelajaran, pengelolaan kelas, evaluasi pembelajaran</li>
+                <li>Penyusunan perangkat pembelajaran: modul ajar, CP dan TP, LKPD, media pembelajaran, instrumen penilaian</li>
+                <li>Etika Profesi Guru: sikap profesional, administrasi sekolah, hubungan dengan siswa dan guru, disiplin dan tanggung jawab</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item glass">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Pengalaman Menantang</h3>
+              <ul class="refleksi-list">
+                <li><strong>Mengelola Kelas:</strong> teori pengelolaan kelas terkadang berbeda dengan kondisi nyata di sekolah</li>
+                <li><strong>Menyesuaikan Metode:</strong> menghadapi materi sulit, kemampuan siswa beragam, waktu pembelajaran terbatas</li>
+                <li><strong>Adaptasi Budaya Sekolah:</strong> cara komunikasi dengan guru, tata tertib sekolah, kedisiplinan dan etos kerja</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item glass">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Umpan Balik Guru Pamong</h3>
+              <ul class="refleksi-list">
+                <li>Sudah menggunakan variasi metode agar siswa tidak bosan</li>
+                <li>Sudah bagus dalam membangun interaksi/kedekatan dengan siswa</li>
+                <li>Suara perlu lebih jelas dan tegas</li>
+                <li>Penguasaan kelas sudah baik, tetapi siswa belakang masih kurang terlibat</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item glass">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Umpan Balik Dosen Pembimbing</h3>
+              <ul class="refleksi-list">
+                <li>Mahasiswa sudah menunjukkan perkembangan dalam keterampilan mengajar</li>
+                <li>Model pembelajaran sudah sesuai, tetapi sintaknya belum lengkap</li>
+                <li>Refleksi pembelajaran perlu lebih mendalam</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="filosofi" class="section filosofi section-bg-filosofi">
+      <div class="container">
+        <h2 class="section-title">Filosofi</h2>
+        <p class="section-subtitle">Nilai dan keyakinan pendidikan</p>
+        <div class="filosofi-grid">
+          <div class="filosofi-card glass">
+            <h3>Nilai Hidup</h3>
+            <ul class="nilai-list">
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Integritas</li>
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Tanggung Jawab</li>
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Empati</li>
+            </ul>
+          </div>
+          <div class="filosofi-card glass">
+            <h3>Filosofi Mengajar</h3>
+            <p>Deskripsi Filosofi Mengajar</p>
+          </div>
+          <div class="filosofi-card glass">
+            <h3>Keyakinan Pendidikan</h3>
+            <p>Prinsip-prinsip Pendidikan</p>
+          </div>
+        </div>
+        <blockquote class="main-quote glass">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.3"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
+          <p>"Pendidikan bukan sekadar mentransfer pengetahuan, tetapi menumbuhkan karakter dan memerdekakan potensi peserta didik."</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="galeri" class="section galeri section-bg-galeri">
+      <div class="container">
+        <h2 class="section-title">Galeri Dokumentasi</h2>
+        <p class="section-subtitle">Dokumentasi kegiatan secara visual</p>
+        <div class="galeri-grid" id="galeri-grid"></div>
+        <button id="lihat-lainnya" class="btn-lihat">Lihat Lebih Banyak</button>
+      </div>
+      <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="">
+        <div class="lightbox-caption"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal-card glass">
+      <button class="modal-close">&times;</button>
+      <h3 class="modal-title"></h3>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Salman Hidayat</h3>
+          <p>Portfolio PPG — Pendidikan Profesi Guru</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigasi Cepat</h4>
+          <ul>
+            <li><a href="#profil">Profil</a></li>
+            <li><a href="#artefak">Artefak</a></li>
+            <li><a href="#penilaian">Penilaian</a></li>
+            <li><a href="#refleksi">Refleksi</a></li>
+            <li><a href="#filosofi">Filosofi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <ul>
+            <li><a href="mailto:salmanhidayat15@gmail.com">Email</a></li>
+            <li><a href="#">WhatsApp</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 — Portfolio PPG Salman Hidayat</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
