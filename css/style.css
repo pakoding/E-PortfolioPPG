@@ -668,13 +668,13 @@ a:hover {
 }
 
 .biodata-photo-bottom {
-  margin-top: 20px;
+  margin-top: 25px;
   text-align: center;
 }
 
 .biodata-photo-bottom img {
-  width: 60%;
-  height: 60%;
+  width: 75%;
+  height: 75%;
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 4px 20px rgba(30,58,138,0.2);
