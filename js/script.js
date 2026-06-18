@@ -84,94 +84,76 @@ document.addEventListener('DOMContentLoaded', () => {
   const siklusContainer = document.getElementById('siklus-container');
 
   const siklusLinks = {
+    1: 'https://drive.google.com/drive/folders/1N1JnSfiKVpPwyejX9vJt6-_jDLM5JbbA?usp=drive_link',
+    2: 'https://drive.google.com/drive/folders/1O7WA3ol-R6aDaecaoBiZz_pK--UNxrNA?usp=drive_link',
+    3: 'https://drive.google.com/drive/folders/1fIrPgANUjaJw-LZNAgJKui2QXSiqqLxI?usp=drive_link'
+  };
+
+  const analisisData = {
     1: [
-      'https://drive.google.com/drive/folders/14VXgkAXQbuSD24CbVAdCPsHrPcJAvMzF?usp=drive_link',
-      'https://drive.google.com/drive/folders/1TvBrmCuEbLf-5DaNZ3uDQLPN-C9_zCJI?usp=drive_link',
-      'https://drive.google.com/drive/folders/1v24nFOLc_5uMojZ-2E-c_vlio2JhjS7K?usp=drive_link'
+      ['Kendala Penyusunan', 'Kesulitan menyesuaikan alokasi waktu dengan materi'],
+      ['Adopsi Teori dan Pedagogi', 'Menerapkan teori konstruktivisme dan saintifik'],
+      ['Faktor Keberhasilan', 'Bimbingan guru pamong yang intensif'],
+      ['Adaptasi untuk Situasi Berbeda', 'Menyesuaikan metode untuk siswa dengan gaya belajar berbeda']
     ],
     2: [
-      'https://drive.google.com/drive/folders/1c9yBCzsYOPtHiSNenyUAk6eCj1QIIEm-?usp=drive_link',
-      'https://drive.google.com/drive/folders/1OK58W3zYt3-7uc1dmG-yu6ulc4I9iEBO?usp=drive_link',
-      'https://drive.google.com/drive/folders/1swa8UXow_Hq8ZuB3fExSnPv2TDiktYW_?usp=drive_link'
+      ['Kendala Penyusunan', 'Mengintegrasikan TPACK dalam perangkat ajar'],
+      ['Adopsi Teori dan Pedagogi', 'Menggunakan pendekatan berdiferensiasi'],
+      ['Faktor Keberhasilan', 'Refleksi dari siklus 1 dan motivasi siswa'],
+      ['Adaptasi untuk Situasi Berbeda', 'Menggunakan media variatif untuk kelas heterogen']
     ],
     3: [
-      'https://drive.google.com/drive/folders/1_dH9al_6aPctooYz1j--xRpDQugvjLo-?usp=drive_link',
-      'https://drive.google.com/drive/folders/12sGL7fHO5oSiyo98qF0R3HnBg60claxk?usp=drive_link',
-      'https://drive.google.com/drive/folders/1rTfapTRmP_e-zbinpaJQ3azw14LtiLri?usp=drive_link'
+      ['Kendala Penyusunan', 'Menyusun instrumen asesmen yang komprehensif'],
+      ['Adopsi Teori dan Pedagogi', 'Menerapkan project based learning secara penuh'],
+      ['Faktor Keberhasilan', 'Kolaborasi dengan sesama mahasiswa PPG'],
+      ['Adaptasi untuk Situasi Berbeda', 'Modifikasi LKPD sesuai kebutuhan individu siswa']
     ]
   };
 
-  const pertemuanData = [
-    { number: 1, analisis: [
-      ['Kendala Penyusunan', '-'],
-      ['Adopsi Teori dan Pedagogi', '-'],
-      ['Faktor Keberhasilan', '-'],
-      ['Adaptasi untuk Situasi Berbeda', '-']
-    ]},
-    { number: 2, analisis: [
-      ['Kendala Penyusunan', '-'],
-      ['Adopsi Teori dan Pedagogi', '-'],
-      ['Faktor Keberhasilan', '-'],
-      ['Adaptasi untuk Situasi Berbeda', '-']
-    ]},
-    { number: 3, analisis: [
-      ['Kendala Penyusunan', '-'],
-      ['Adopsi Teori dan Pedagogi', '-'],
-      ['Faktor Keberhasilan', '-'],
-      ['Adaptasi untuk Situasi Berbeda', '-']
-    ]}
-  ];
-
-  function buildPertemuanHTML(data, siklusNum) {
-    const rows = data.analisis.map(r =>
+  function buildSiklusCard(siklusNum) {
+    const rows = analisisData[siklusNum].map(r =>
       `<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`
     ).join('');
 
-    const driveLink = siklusLinks[siklusNum][data.number - 1];
-    const imgBase = `assets/images/siklus${siklusNum}/pertemuan${data.number}`;
+    const driveLink = siklusLinks[siklusNum];
+    const imgBase = `assets/images/siklus${siklusNum}/pertemuan1`;
 
     return `
-      <div class="pertemuan">
-        <div class="pertemuan-header">
-          <h3 class="pertemuan-title">Pertemuan ${data.number}</h3>
-          <span class="pertemuan-toggle">+</span>
-        </div>
-        <div class="pertemuan-body">
-          <div class="pertemuan-inner">
-            <div class="modul-ajar">
-              <div class="modul-header">
-                <h4>Modul Ajar</h4>
-                <button class="btn-doc" onclick="window.open('${driveLink}', '_blank')">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                    <polyline points="14 2 14 8 20 8"/>
-                    <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
-                  </svg>
-                  Lihat Dokumen
-                </button>
-              </div>
+      <div class="siklus-content${siklusNum === 1 ? ' active' : ''}" data-siklus="${siklusNum}">
+        <div class="siklus-card">
+          <div class="modul-ajar">
+            <div class="modul-header">
+              <h4>Modul Ajar</h4>
+              <button class="btn-doc" onclick="window.open('${driveLink}', '_blank')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+                Lihat Dokumen
+              </button>
             </div>
-            <div class="analisis">
-              <h4>Analisis Pembelajaran</h4>
-              <div class="table-wrapper">
-                <table>
-                  <thead><tr><th>Komponen</th><th>Deskripsi</th></tr></thead>
-                  <tbody>${rows}</tbody>
-                </table>
-              </div>
+          </div>
+          <div class="analisis">
+            <h4>Analisis Pembelajaran</h4>
+            <div class="table-wrapper">
+              <table>
+                <thead><tr><th>Komponen</th><th>Deskripsi</th></tr></thead>
+                <tbody>${rows}</tbody>
+              </table>
             </div>
-            <div class="dokumentasi">
-              <h4>Dokumentasi</h4>
-              <div class="gallery-grid mini">
-                <div class="gallery-item">
-                  <img src="${imgBase} (1).jpg" alt="Dokumentasi ${data.number}" loading="lazy">
-                </div>
-                <div class="gallery-item">
-                  <img src="${imgBase} (2).jpg" alt="Dokumentasi ${data.number}" loading="lazy">
-                </div>
-                <div class="gallery-item">
-                  <img src="${imgBase} (3).jpg" alt="Dokumentasi ${data.number}" loading="lazy">
-                </div>
+          </div>
+          <div class="dokumentasi">
+            <h4>Dokumentasi</h4>
+            <div class="gallery-grid mini">
+              <div class="gallery-item">
+                <img src="${imgBase} (1).jpg" alt="Dokumentasi" loading="lazy">
+              </div>
+              <div class="gallery-item">
+                <img src="${imgBase} (2).jpg" alt="Dokumentasi" loading="lazy">
+              </div>
+              <div class="gallery-item">
+                <img src="${imgBase} (3).jpg" alt="Dokumentasi" loading="lazy">
               </div>
             </div>
           </div>
@@ -180,13 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
-  function buildSiklusContent(siklusNum) {
-    return `<div class="siklus-content${siklusNum === 1 ? ' active' : ''}" data-siklus="${siklusNum}">
-      ${pertemuanData.map(p => buildPertemuanHTML({...p}, siklusNum)).join('')}
-    </div>`;
-  }
-
-  siklusContainer.innerHTML = [1,2,3].map(n => buildSiklusContent(n)).join('');
+  siklusContainer.innerHTML = [1,2,3].map(n => buildSiklusCard(n)).join('');
 
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -199,13 +175,6 @@ document.addEventListener('DOMContentLoaded', () => {
           content.classList.add('active');
         }
       });
-    });
-  });
-
-  document.querySelectorAll('.pertemuan-header').forEach(header => {
-    header.addEventListener('click', () => {
-      const pertemuan = header.closest('.pertemuan');
-      pertemuan.classList.toggle('open');
     });
   });
 
